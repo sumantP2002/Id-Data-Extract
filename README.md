@@ -1,90 +1,70 @@
-# Thai ID Card OCR Web Application
+# Getting Started with Create React App
 
-Welcome to the Thai ID Card OCR Web Application project! This web application allows users to upload Thai ID card images, extract relevant information using OCR (Optical Character Recognition), and perform various operations on the extracted data.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Table of Contents
+## Available Scripts
 
-1. Features
-2. Images
-3. Getting Started
-4. Installation
-5. Folder Structure
-6. Dependencies
-7. Acknowledgements
+In the project directory, you can run:
 
-# Features
+### `npm start`
 
-Upload ID Card: Users can upload images of Thai ID cards.\
-OCR Extraction: Utilizes OCR to extract information from the uploaded ID card images.\
-Display and Delete: View and delete specific ID card information.\
-Display All: Display a list of all uploaded ID cards.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# Images
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-![alt text](./homePage.png)
-![alt text](./insert.png)
+### `npm test`
 
-![alt text](./display.png)
-![alt text](./displayall.png)
-![alt text](./insert.png)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-# Getting Started
+### `npm run build`
 
-Step 1. Make a clone of this Repo using the link present above.\
-Step 2. Open Project in VS Code and install all teh dependencies.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-# Steps to Install dependency :
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1> open two terminal -> Open the main project in one terminal and open server in 2nd Terminal\
-2> Enter command as [npm install] in both terminal to install all dependency used in this project.\
-3> Now make your own .env file in server for storing th mongoDB url as MONGO_URL and PORT = 8000.\
-4> Add a folder in server as config and make a .js file named as serviceAccount.js and add service account credential in js format.\
-5> Now to run the project : Enter command as [npm start] for first terminal and command as [node server.js] for second terminal i.e for server.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# Folder Structure
+### `npm run eject`
 
-- node_module
-- public
-- Server
-  - config
-    - serviceAccounts.js
-  - Controllers
-    - ocrControllers.js
-  - Models
-    - OCRModel.js
-  - node_modules
-  - Routes
-    - apiRoutes.js
-  - .env
-  - package-lock.json
-  - package.json
-  - server.js
-    -src
-  - pages
-    - CreateNew.js
-    - Delete.js
-    - Display.js
-    - DisplayAlll.js
-    - HomePage.js
-  - App.css
-  - App.js
-  - index.css
-  - index.js
-- package-lock.json
-- package.json
-- README.MD
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-# Dependency
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- react
-- react-router
-- axios
-- @google-cloud/vision
-- dotenv
-- express
-- mongoose
-- nodemon
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-# Acknowledgements
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-I would like to thank QOALA for giving me this assignment, I come to learn something new relate to OCR. I really enjoyed working upon this project and happy to say that i have completed this project in less than 3 days.
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
