@@ -7,7 +7,4 @@ router.post('/create-ocr' ,formidable(),create);
 router.get('/display-ocr/:identificationNumber',display);
 router.delete('/delete-ocr/:identificationNumber',todelete);
 router.get('/getall',displayall);
-// router.post('/update-ocr',update);
-// router.get('/display-ocr',displlay);
-// router.post('/delete-ocr',create);
 export default router;
