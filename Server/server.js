@@ -7,10 +7,10 @@ import apiRoutes from "./Routes/apiRoutes.js";
 
 dotenv.config();
 const DB=process.env.MONGO_URL;
-console.log('MongoDB URI:', DB);
 
 try {
-    await mongoose.connect(DB, { useNewUrlParser: true, useUnifiedTopology: true });
+    console.log('hello');
+    await mongoose.connect(DB, {});
     console.log('Connected to MongoDB');
   } catch (error) {
     console.error('Error connecting to MongoDB:', error.message);

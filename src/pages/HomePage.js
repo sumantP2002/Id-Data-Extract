@@ -7,13 +7,12 @@ const Homepage = () => {
     <>
     <div><button  onClick={() => navigate(`/create`)}>Upload New Identity Card</button>
     </div>
-    <div><button onClick={() => navigate(`/update`)}>Update Identity Card</button>
-    </div>
+    
     <div><button onClick={() => navigate(`/display`)}>Display Identity Card</button>
     </div>
     <div> <button onClick={() => navigate(`/delete`)}>Delete Identity Card</button>
     </div>
-    <div> <button onClick={()=> navigate('/displayAll')}>Display All OCR and update if any</button></div>
+    <div> <button onClick={()=> navigate(`/displayAll`)}>Display All OCR and update if any</button></div>
     </>
   )
 }
