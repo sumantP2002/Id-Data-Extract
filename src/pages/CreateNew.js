@@ -6,21 +6,20 @@ import axios from "axios";
 const CreatenewOCR = () => {
    const navigate=useNavigate();
    const [idcard,setidcard]=useState("");
+   const [responseData, setResponseData] = useState(null);
    const handlecreate=async(e)=>
    {
       e.preventDefault();
       try {
         const IdcardData = new FormData();
         IdcardData.append("idcard", idcard);
-        console.log('go to backend');
-        const { data } = await axios.post(
-          "/api/create-ocr",
-          IdcardData
-        );
+        const { data } = await axios.post("/api/create-ocr", IdcardData);
+
         if (data?.success) {
           toast.error(data?.message);
         } else {
           toast.success("OCR Created Successfully");
+          setResponseData(data);
           // navigate("/display");
         }
       } catch (error) {
@@ -47,6 +46,32 @@ const CreatenewOCR = () => {
     <div><button onClick={handlecreate}>
       Submit
     </button></div>
+    
+    {responseData && (
+        <div>
+          <p>Data EXTRACTED</p>
+          <p>
+            <strong>Identification Number:</strong> {responseData.identificationNumber}
+          </p>
+          <p>
+            <strong>Name:</strong> {responseData.name}
+          </p>
+          <p>
+            <strong>Last Name:</strong> {responseData.lastName}
+          </p>
+          <p>
+            <strong>Date of Birth:</strong> {responseData.dateOfBirth}
+          </p>
+          <p>
+            <strong>Date of Issue:</strong> {responseData.dateOfIssue}
+          </p>
+          <p>
+            <strong>Date of Expiry:</strong> {responseData.dateOfExpiry}
+          </p>
+          
+        </div>
+      )}
+
     </>
   );
 }

@@ -83,20 +83,23 @@ export const create = async (req, res) => {
 };
 
 export const display =async(req,res)=>{
-    try{
-        const filters = req.query;
+    try {
+        const { identificationNumber } = req.params;
+    
+        // Use the findOne method to find the document by identification number
+        const ocrData = await OCRModel.findOne({ identificationNumber: identificationNumber });
+    
+        if (ocrData) {
+          res.json({ success: true, ocrData });
+        } else {
+          res.status(404).json({ success: false, message: 'OCR data not found' });
+        }
+      } catch (error) {
+        console.error('Error retrieving OCR data:', error);
+        res.status(500).json({ error: 'Error retrieving OCR data' });
+      }
 
-        Object.keys(filters).forEach((key) => filters[key] === undefined && delete filters[key]);
 
-        // Implement logic to query the database based on the filters
-        const filteredIdCards = await OCRModel.find(filters);
-        console.log(filteredIdCards);
-        res.json(filteredIdCards);
-    }
-    catch (error){
-        console.log(error.message);
-        res.status(500).json("Internal Server Error")
-    }
 };
 
 export const todelete=async(req,res)=>{
@@ -119,8 +122,8 @@ export const todelete=async(req,res)=>{
 
 export const displayall=async(req,res)=>{
     try{
-        const idCard = await OCRModel.find({})
-        res.json(idCard)
+        const idCard = await OCRModel.find();
+        res.json(idCard);
        } catch (error) {
         console.log(error.message)
         res.status(500).json("Internal server Error")
