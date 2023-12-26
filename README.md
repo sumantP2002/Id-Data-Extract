@@ -14,6 +14,7 @@ Welcome to the Thai ID Card OCR Web Application project! This web application al
 7. Acknowledgements
 
 # DEPLOYED WEBSITE LINK : https://thaiid-info.onrender.com/
+NOTE : It is taking some time to initially loading the app, it is because of dalay in running backend and connecting to mongodb and running frontend.
 
 # Features
 
